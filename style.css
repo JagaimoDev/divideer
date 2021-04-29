@@ -1,3 +1,12 @@
 .cf {
     font-family: 'Courier New', Courier, monospace;
 }
+
+#author {
+    position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 4px;
+	color: black;
+	font-size: 15px;
+}
