@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divideer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="number" value="10">
+
+    <select id="fromSystem">
+        <option value="2">(2) Binary</option>
+        <option value="3">(3) Ternary</option>
+        <option value="4">(4) Quaternary</option>
+        <option value="5">(5) Quinary</option>
+        <option value="6">(6) Senary</option>
+        <option value="7">(7) Septenary</option>
+        <option value="8">(8) Octal</option>
+        <option value="9">(9) Nonary</option>
+        <option value="10" selected="selected">(10) Decimal</option>
+        <option value="11">(11) Undecimal</option>
+        <option value="12">(12) Duodecimal</option>
+        <option value="13">(13) Tridecimal</option>
+        <option value="14">(14) Tetradecimal</option>
+        <option value="15">(15) Pentadecimal</option>
+        <option value="16">(16) Hexadecimal</option>
+    </select>
+
+    <select id="toSystem">
+        <option value="2" selected="selected">(2) Binary</option>
+        <option value="3">(3) Ternary</option>
+        <option value="4">(4) Quaternary</option>
+        <option value="5">(5) Quinary</option>
+        <option value="6">(6) Senary</option>
+        <option value="7">(7) Septenary</option>
+        <option value="8">(8) Octal</option>
+        <option value="9">(9) Nonary</option>
+        <option value="10">(10) Decimal</option>
+        <option value="11">(11) Undecimal</option>
+        <option value="12">(12) Duodecimal</option>
+        <option value="13">(13) Tridecimal</option>
+        <option value="14">(14) Tetradecimal</option>
+        <option value="15">(15) Pentadecimal</option>
+        <option value="16">(16) Hexadecimal</option>
+    </select>
+
+    <input type="button" id="convertBtn" value="Convert">
+
+    <p id="calculations" class="cf"></p>
+
+    <p id="divide" class="cf"></p>
+
+    <p id="result" class="cf"></p>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
