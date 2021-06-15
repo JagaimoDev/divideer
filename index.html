@@ -8,51 +8,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="number" value="10">
+    <div id="container">
+        <main>
+            <form id="convertForm">
+                <input type="text" id="number" value="10">
 
-    <select id="fromSystem">
-        <option value="2">(2) Binary</option>
-        <option value="3">(3) Ternary</option>
-        <option value="4">(4) Quaternary</option>
-        <option value="5">(5) Quinary</option>
-        <option value="6">(6) Senary</option>
-        <option value="7">(7) Septenary</option>
-        <option value="8">(8) Octal</option>
-        <option value="9">(9) Nonary</option>
-        <option value="10" selected="selected">(10) Decimal</option>
-        <option value="11">(11) Undecimal</option>
-        <option value="12">(12) Duodecimal</option>
-        <option value="13">(13) Tridecimal</option>
-        <option value="14">(14) Tetradecimal</option>
-        <option value="15">(15) Pentadecimal</option>
-        <option value="16">(16) Hexadecimal</option>
-    </select>
+                <select id="fromSystem">
+                    <option value="2">(2) Binary</option>
+                    <option value="3">(3) Ternary</option>
+                    <option value="4">(4) Quaternary</option>
+                    <option value="5">(5) Quinary</option>
+                    <option value="6">(6) Senary</option>
+                    <option value="7">(7) Septenary</option>
+                    <option value="8">(8) Octal</option>
+                    <option value="9">(9) Nonary</option>
+                    <option value="10" selected="selected">(10) Decimal</option>
+                    <option value="11">(11) Undecimal</option>
+                    <option value="12">(12) Duodecimal</option>
+                    <option value="13">(13) Tridecimal</option>
+                    <option value="14">(14) Tetradecimal</option>
+                    <option value="15">(15) Pentadecimal</option>
+                    <option value="16">(16) Hexadecimal</option>
+                </select>
 
-    <select id="toSystem">
-        <option value="2" selected="selected">(2) Binary</option>
-        <option value="3">(3) Ternary</option>
-        <option value="4">(4) Quaternary</option>
-        <option value="5">(5) Quinary</option>
-        <option value="6">(6) Senary</option>
-        <option value="7">(7) Septenary</option>
-        <option value="8">(8) Octal</option>
-        <option value="9">(9) Nonary</option>
-        <option value="10">(10) Decimal</option>
-        <option value="11">(11) Undecimal</option>
-        <option value="12">(12) Duodecimal</option>
-        <option value="13">(13) Tridecimal</option>
-        <option value="14">(14) Tetradecimal</option>
-        <option value="15">(15) Pentadecimal</option>
-        <option value="16">(16) Hexadecimal</option>
-    </select>
+                <select id="toSystem">
+                    <option value="2" selected="selected">(2) Binary</option>
+                    <option value="3">(3) Ternary</option>
+                    <option value="4">(4) Quaternary</option>
+                    <option value="5">(5) Quinary</option>
+                    <option value="6">(6) Senary</option>
+                    <option value="7">(7) Septenary</option>
+                    <option value="8">(8) Octal</option>
+                    <option value="9">(9) Nonary</option>
+                    <option value="10">(10) Decimal</option>
+                    <option value="11">(11) Undecimal</option>
+                    <option value="12">(12) Duodecimal</option>
+                    <option value="13">(13) Tridecimal</option>
+                    <option value="14">(14) Tetradecimal</option>
+                    <option value="15">(15) Pentadecimal</option>
+                    <option value="16">(16) Hexadecimal</option>
+                </select>
 
-    <input type="button" id="convertBtn" value="Convert">
+                <select id="resultsFontSize">
+                    <option value="8px">8 px</option>
+                    <option value="9px">9 px</option>
+                    <option value="10px">10 px</option>
+                    <option value="11px">11 px</option>
+                    <option value="12px">12 px</option>
+                    <option value="14px">14 px</option>
+                    <option value="16px" selected="selected">16 px</option>
+                    <option value="18px">18 px</option>
+                    <option value="20px">20 px</option>
+                    <option value="22px">22 px</option>
+                    <option value="24px">24 px</option>
+                    <option value="26px">26 px</option>
+                    <option value="28px">28 px</option>
+                    <option value="36px">36 px</option>
+                </select>
 
-    <p id="calculations" class="cf"></p>
+                <input type="submit" id="calculateBtn" value="CALCULATE">
+            </form>
 
-    <p id="divide" class="cf"></p>
-
-    <p id="result" class="cf"></p>
+            <div id="resultsContainer">
+                <p id="results"></p>
+            </div>
+        </main>
+    </div>
 
     <a href="https://github.com/PotatoDev33" target="_blank"><p id="author">PotatoDev33</p></a>
 
