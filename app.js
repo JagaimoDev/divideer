@@ -3,7 +3,7 @@ const fromSystem = document.querySelector('#fromSystem');
 const toSystem = document.querySelector('#toSystem');
 const resultsFontSize = document.querySelector('#resultsFontSize');
 const convertForm = document.querySelector('#convertForm');
-const resultsP = document.querySelector('#results');
+const resultsArea = document.querySelector('#resultsArea');
 const allowedNumbers = '0123456789ABCDEF';
 let results;
 
@@ -17,29 +17,29 @@ convertForm.addEventListener('submit', (e) => {
 
     if (fromSystem.value != 10 && fromSystem.value != toSystem.value) {
         calculating(number.value.toUpperCase(), fromSystem.value);
-        results += '<br><br>';
+        results += '\n\n';
     }
     if (toSystem.value != 10 && fromSystem.value != toSystem.value) {
         dividing(parseInt(number.value, fromSystem.value), toSystem.value, 0, 0, '');
-        results += '<br>';
+        results += '\n';
     }
 
-    results += `${number.value.toUpperCase()}<sub>${fromSystem.value}</sub> = ${parseInt(number.value, fromSystem.value)
+    results += `${number.value.toUpperCase()}(${fromSystem.value}) = ${parseInt(number.value, fromSystem.value)
         .toString(parseInt(toSystem.value))
-        .toUpperCase()}<sub>${toSystem.value}</sub>`;
+        .toUpperCase()}(${toSystem.value})`;
 
-    resultsP.style.fontSize = resultsFontSize.value;
-    resultsP.innerHTML = results;
+    resultsArea.style.fontSize = resultsFontSize.value;
+    resultsArea.innerHTML = results;
 });
 
 function calculating(n, fS) {
     let addedNumbers = '';
     let nOfAddedNumbers = 0;
     
-    results += `${n}<sub>${fS}</sub> =`;
+    results += `${n}(${fS}) =`;
     
     for (let i = 0; i < n.length; i++) {
-        results += ` ${parseInt(n[i], fS)}×${fS}<sup>${n.length - i - 1}</sup> +`;
+        results += ` ${parseInt(n[i], fS)}×${fS}^${n.length - i - 1} +`;
     }
     results = results.slice(0, -1);
 
@@ -50,7 +50,7 @@ function calculating(n, fS) {
         }
     }
     addedNumbers = '=' + addedNumbers.slice(0, -1);
-    results += (nOfAddedNumbers > 1 ? addedNumbers : '') + `= ${parseInt(n, fS)}<sub>10</sub>`;
+    results += (nOfAddedNumbers > 1 ? addedNumbers : '') + `= ${parseInt(n, fS)}(10)`;
 }
 
 function dividing(n, tS, nMaxLength, resultMaxLength) {
@@ -59,7 +59,7 @@ function dividing(n, tS, nMaxLength, resultMaxLength) {
 
     results += `${n.toString().padStart(nMaxLength, '\xa0')} : ${tS} = ${calcResult
         .toString()
-        .padEnd(resultMaxLength, '\xa0')} | ${remainder}<br>`;
+        .padEnd(resultMaxLength, '\xa0')} | ${remainder}\n`;
 
     if (calcResult == 0) return;
 
@@ -72,5 +72,5 @@ function dividing(n, tS, nMaxLength, resultMaxLength) {
 }
 
 function urDumb() {
-    resultsP.innerHTML = "You're dumb :)"
+    resultsArea.innerHTML = "You're dumb :)"
 }
