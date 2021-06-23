@@ -77,9 +77,6 @@ main {
 	height: 40vh;
 	min-height: 240px;
 	margin-top: 4vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	box-sizing: border-box;
 	border-width: 3px;
 	border-style: solid;
@@ -90,8 +87,10 @@ main {
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16px;
 	text-align: left;
-	resize: none;
+	overflow: auto;
 	white-space: nowrap;
+	background-color: white;
+	padding: 1%;
 }
 
 #author {

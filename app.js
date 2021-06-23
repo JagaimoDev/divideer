@@ -17,16 +17,16 @@ convertForm.addEventListener('submit', (e) => {
 
     if (fromSystem.value != 10 && fromSystem.value != toSystem.value) {
         calculating(number.value.toUpperCase(), fromSystem.value);
-        results += '\n\n';
+        results += '<br><br>';
     }
     if (toSystem.value != 10 && fromSystem.value != toSystem.value) {
         dividing(parseInt(number.value, fromSystem.value), toSystem.value, 0, 0, '');
-        results += '\n';
+        results += '<br>';
     }
 
-    results += `${number.value.toUpperCase()}(${fromSystem.value}) = ${parseInt(number.value, fromSystem.value)
+    results += `${number.value.toUpperCase()}<sub>${fromSystem.value}</sub> = ${parseInt(number.value, fromSystem.value)
         .toString(parseInt(toSystem.value))
-        .toUpperCase()}(${toSystem.value})`;
+        .toUpperCase()}<sub>${toSystem.value}</sub>`;
 
     resultsArea.style.fontSize = resultsFontSize.value;
     resultsArea.innerHTML = results;
@@ -35,11 +35,11 @@ convertForm.addEventListener('submit', (e) => {
 function calculating(n, fS) {
     let addedNumbers = '';
     let nOfAddedNumbers = 0;
-    
-    results += `${n}(${fS}) =`;
-    
+
+    results += `${n}<sub>${fS}</sub> =`;
+
     for (let i = 0; i < n.length; i++) {
-        results += ` ${parseInt(n[i], fS)}×${fS}^${n.length - i - 1} +`;
+        results += ` ${parseInt(n[i], fS)}×${fS}<sup>${n.length - i - 1}</sup> +`;
     }
     results = results.slice(0, -1);
 
@@ -50,7 +50,7 @@ function calculating(n, fS) {
         }
     }
     addedNumbers = '=' + addedNumbers.slice(0, -1);
-    results += (nOfAddedNumbers > 1 ? addedNumbers : '') + `= ${parseInt(n, fS)}(10)`;
+    results += (nOfAddedNumbers > 1 ? addedNumbers : '') + `= ${parseInt(n, fS)}<sub>10</sub>`;
 }
 
 function dividing(n, tS, nMaxLength, resultMaxLength) {
@@ -59,7 +59,7 @@ function dividing(n, tS, nMaxLength, resultMaxLength) {
 
     results += `${n.toString().padStart(nMaxLength, '\xa0')} : ${tS} = ${calcResult
         .toString()
-        .padEnd(resultMaxLength, '\xa0')} | ${remainder}\n`;
+        .padEnd(resultMaxLength, '\xa0')} | ${remainder}<br>`;
 
     if (calcResult == 0) return;
 
