@@ -12,22 +12,34 @@ body {
 }
 
 main {
-	width: 30vw;
-	height: 60vh;
-	min-width: 250px;
-	min-height: 350px;
+	width: 90vw;
+	height: 80vh;
 	border-width: 5px;
 	border-style: solid;
 	border-top-color: rgb(124, 176, 250);
 	border-left-color: rgb(124, 176, 250);
 	border-right-color: rgb(128, 119, 250);
 	border-bottom-color: rgb(128, 119, 250);
-	padding: 0.5%;
+	padding: 1%;
 	background-color: rgb(217, 242, 255);
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#convertForm {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 #number, #fromSystem, #toSystem, #resultsFontSize {
+	font-size: 13px;
+	box-sizing: border-box;
+}
+
+#number, #fromSystem, #toSystem, #resultsFontSize, #calculateBtn {
 	display: inline-block;
 	background: none;
 	border-width: 3px;
@@ -36,48 +48,38 @@ main {
 	border-left-color: rgb(124, 176, 250);
 	border-right-color: rgb(128, 119, 250);
 	border-bottom-color: rgb(128, 119, 250);
-	width: 8vw;
-	height: 3vh;
-	min-height: 30px;
-	font-size: 13px;
-	box-sizing: border-box;
-	margin: 0.2vw;
-	padding: 1px;
+	margin-top: 2%;
+	min-width: max-content;
+	min-height: max-content;
 }
 
-#fromSystem, #toSystem, #resultsFontSize {
+#fromSystem, #toSystem, #resultsFontSize, #calculateBtn {
 	cursor: pointer;
 }
 
 #number {
-	width: 6vw;
+	width: 30%
+}
+
+#fromSystem, #toSystem {
+	width: 20%;
 }
 
 #resultsFontSize {
-	width: 4vw;
+	width: 5%;
 }
 
 #calculateBtn {
-	background: none;
-	border-width: 3px;
-	border-style: solid;
-	border-top-color: rgb(124, 176, 250);
-	border-left-color: rgb(124, 176, 250);
-	border-right-color: rgb(128, 119, 250);
-	border-bottom-color: rgb(128, 119, 250);
-	cursor: pointer;
-	margin-top: 2vh;
-	padding: 1vh 0.5vw;
 	font-size: 20px;
 	font-style: italic;
+	width: 10%;
 }
 
 #resultsArea {
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16pt;
 	width: 100%;
-	height: 40vh;
-	min-height: 240px;
+	height: 100%;
 	margin-top: 4vh;
 	box-sizing: border-box;
 	border-width: 3px;
@@ -90,7 +92,7 @@ main {
 	overflow: auto;
 	white-space: nowrap;
 	background-color: white;
-	padding: 1%;
+	padding: 0.5%;
 }
 
 #author {
