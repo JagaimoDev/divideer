@@ -3,7 +3,7 @@ const fromSystem = document.querySelector('#fromSystem');
 const toSystem = document.querySelector('#toSystem');
 const resultsFontSize = document.querySelector('#resultsFontSize');
 const convertForm = document.querySelector('#convertForm');
-const resultsArea = document.querySelector('#resultsArea');
+const resultsText = document.querySelector('#resultsText');
 const allowedNumbers = '0123456789ABCDEF';
 let results;
 
@@ -28,8 +28,8 @@ convertForm.addEventListener('submit', (e) => {
         .toString(parseInt(toSystem.value))
         .toUpperCase()}<sub>${toSystem.value}</sub>`;
 
-    resultsArea.style.fontSize = resultsFontSize.value;
-    resultsArea.innerHTML = results;
+    resultsText.style.fontSize = resultsFontSize.value;
+    resultsText.innerHTML = results;
 });
 
 function calculating(n, fS) {
@@ -72,5 +72,5 @@ function dividing(n, tS, nMaxLength, resultMaxLength) {
 }
 
 function urDumb() {
-    resultsArea.innerHTML = "You're dumb :)"
+    resultsText.innerHTML = "You're dumb :)"
 }
