@@ -1,3 +1,7 @@
+#resultsText {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 #author {
   position: fixed;
 	bottom: 0;
